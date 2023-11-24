@@ -72,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           return Card(
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              // crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Checkbox(
                                   value: toDoItems[index].status ==
@@ -146,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 actions: [
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).pop(); // Close the dialog
+                      Navigator.of(context).pop(); 
                     },
                     child: const Text('Cancel'),
                   ),
@@ -242,7 +241,6 @@ class _MyHomePageState extends State<MyHomePage> {
         items.add(todoItem);
       }
     }
-    print('TO DO ITEMS SIZE ${items.length}');
     setState(() {
       isLoading = false;
       toDoItems = items;
